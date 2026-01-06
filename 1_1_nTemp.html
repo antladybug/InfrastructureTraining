@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>研修一覧</title>
+		<title>コンピュータ基礎知識1</title>
 		<meta charset = "UTF-8">
 		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
 		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
 		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
-		<style>#menu1 { border-: .2rem solid darkorange; background: ghostwhite; }</style>
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
+		</style>
 	</head>
 	<body>
 		<div id = "wrapper">
-			<div id = "header" class = "FontBold"><a href = "index.html"><span style = "font-weight: bold;">ITインフラ基礎研修</span></a></div>
-			<div id = "menu1"><div class = "FontBold">研修一覧</div></div>
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
+			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
 			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
 			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
 			<div id = "padding"></div>
@@ -22,40 +35,43 @@
 						<a href = "index.html">Home</a>
 					</li>
 					<li class = "panList">
-						<a href = "FE_main.html">研修一覧</a>
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						コンピュータ基礎知識1
 					</li>
 				</ul>
 			</div>
 			<div id = "content">
-				<div class = "title">ITインフラ基礎研修カリキュラム</div>
-				<div class = "indent1rem BorderDotted">
-					レポート課題の一覧です
-				</div>
-				<div id = "1" class = "try">コンピュータ基礎知識</div>
-				<div class = "tryBox">
-					<div class ="tryBoxItem"><a href = "1_1_1ComputerBasics.html" target = "_blank">1回目</a></div>
-					<div style = "font-size: 1.3rem;">
-						※レポートの在り処は
-						<a href = "https://docs.google.com/spreadsheets/d/18LvV1kTARVIkdykKF7snT5eOTRCybVxUGQOE119cMX8/edit?usp=sharing.html" target = "_blank">
-						<span style = "font-size: 1.5rem; color: blue;">こちら</span></a>
+				<div class = "title">コンピュータ基礎知識1</div>
+				<div class = "StepNum FontBold">コンピュータシステムの概要</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">OS</div>
+						<div>
+							<!-- ここに中身 -->
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							xxxxx<span class = "yellow_line FontBold">xxx</span>
+						</div>
+						<div class = "check FontBold">
+							xxxxx<span class = "yellow_line FontBold">xxx</span>
+						</div>
+						<div class = "check FontBold">
+							xxxxx<span class = "yellow_line FontBold">xxx</span><br><br>
+						</div>
 					</div>
-				</div>
 			</div>
 			<div id = "side">
 				<div class = "Side1">
-					<div class = "index" style = "margin-top: 0!important;">目次</div>
-					<a href = "#1"><div class = "indexData1">コンピュータ基礎知識</div></a>
-					<a href = "#2"><div class = "indexData1">サーバー基礎知識</div></a>
-					<a href = "#3"><div class = "indexData1">PCの仕組み</div></a>
-					<a href = "#4"><div class = "indexData1">AWS入門</div></a>
-					<a href = "#5"><div class = "indexData1">サーバー構築演習</div></a>
-					<a href = "#6"><div class = "indexData1">ネットワーク基礎知識</div></a>
-					<a href = "#7"><div class = "indexData1">LPIC1資格対策</div></a>
-					<a href = "#8"><div class = "indexData1">クライアントPC知識</div></a>
-					<a href = "#9"><div class = "indexData1">セキュリティ対策</div></a>
-					<a href = "#10"><div class = "indexData1">総合実技課題</div></a>
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">コンピュータ5大装置</div></a>
+					<a href = "#2"><div class = "indexData1">OS</div></a>
+					<a href = "#3"><div class = "indexData1">サーバ</div></a>
 				</div>
 				<div class = "Side2">
+					<div class = "CharTitle news">新着情報</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
 					<div class = "CharTitle QA">QA</div>
 					<div class = "CharEmp indent1rem">Currently under construction</div>
 				</div>
