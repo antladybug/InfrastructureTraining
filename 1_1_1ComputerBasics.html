@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>コンピュータ基礎知識1</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
+		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
+		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
+			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
+			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
+			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
+			<div id = "padding"></div>
+			<div id = "pan">
+				<ul>
+					<li class = "panList">
+						<a href = "index.html">Home</a>
+					</li>
+					<li class = "panList">
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						コンピュータ基礎知識1
+					</li>
+				</ul>
+			</div>
+			<div id = "content">
+				<div class = "title">コンピュータ基礎知識1</div>
+				<div class = "StepNum FontBold">コンピュータシステムの概要</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">コンピュータ5大装置</div>
+						<div>
+							<h2>【ハードウェア】</h2>
+						<p>
+						ハードウェアとは、コンピュータを構成している装置や部品のことを指します。<br>
+						たとえば、CPU・メモリ・キーボード・ディスプレイなど、手で触れられる
+						<span style="color:red">物理的な部分</span>がすべてハードウェアです。<br><br>
+
+						ハードウェアは、それ単体では動作せず、
+						<span style="color:red">プログラム（ソフトウェア）やデータを与えることで初めて処理を実行できる</span>
+						仕組みになっています。<br>
+						初学者の方は、「ハード＝モノ、ソフト＝命令」と覚えると理解しやすいです。
+						</p>
+
+						<h2>【コンピュータの五大装置】</h2>
+						<p>
+						現在のコンピュータの主流であるノイマン型コンピュータは、次の5つの装置で構成されています。<br>
+						制御装置、演算装置、入力装置、出力装置、記憶装置の5つです。<br>
+						これらをまとめて<span style="color:red">五大装置</span>と呼びます。
+						</p>
+
+						<h3>（1）制御装置と演算装置</h3>
+						<p>
+						演算装置は計算や論理処理を行う装置で、コンピュータの「計算担当」です。<br>
+						制御装置はプログラムを読み取り、ほかの装置へ指示を出す「司令塔」の役割を持ちます。<br><br>
+
+						この2つをまとめて<span style="color:red">中央処理装置（CPU）</span>と呼びます。<br>
+						CPUは人間でいう「脳」にあたる部分で、コンピュータの中心的な役割を担っています。<br><br>
+
+						CPUは電圧のON/OFF（0と1）を高速に処理するため、半導体を使った集積回路（IC）で構成されています。
+						</p>
+
+						<h3>（2）入力装置と出力装置</h3>
+						<p>
+						入力装置と出力装置は、まとめて<span style="color:red">入出力装置（周辺装置）</span>と呼ばれます。
+						</p>
+
+						<p>
+						● <span style="color:red">入力装置</span><br>
+						利用者がコンピュータにデータを与えるための装置です。<br>
+						例：キーボード、マウス、マイク、バーコードリーダーなど
+						</p>
+
+						<p>
+						● <span style="color:red">出力装置</span><br>
+						CPUが処理した結果を利用者に伝える装置です。<br>
+						例：ディスプレイ、スピーカー、プリンタ、プロジェクタなど
+						</p>
+
+						<h3>（3）記憶装置</h3>
+						<p>
+						記憶装置は、データやプログラムを保存するための装置です。<br>
+						ノイマン型コンピュータでは、すべてのデータとプログラムを記憶装置に置き、制御装置がそれを読み出しながら処理を進めます。<br><br>
+
+						記憶装置は<span style="color:red">主記憶装置（メモリ）</span>と呼ばれることもあり、CPUと密接に連携して動作します。
+						</p>
+
+						<p>
+						● ROM（読み出し専用）<br>
+						電源を切ってもデータが消えない不揮発性のメモリです。
+						</p>
+
+						<p>
+						● RAM（読み書き可能）<br>
+						電源を切るとデータが消える揮発性のメモリです。<br>
+						初学者は「RAM＝作業机」「ROM＝説明書」と覚えると理解しやすいです。
+						</p>
+
+						<h2>【補助記憶装置】</h2>
+						<p>
+						補助記憶装置は、電源を切ってもデータを保存できる大容量の記憶装置です。<br>
+						パソコンのデータ保存や読み書きの効率を高めるために使われます。
+						</p>
+
+						<h3>（1）ハードディスク装置（HDD）</h3>
+						<p>
+						金属製の円盤に磁気を使ってデータを記録する装置です。<br>
+						大容量で安価なため、長年パソコンの主要な記憶装置として利用されてきました。
+						</p>
+
+						<h3>（2）光学ドライブ</h3>
+						<p>
+						レーザー光を使ってデータを読み書きする装置です。<br>
+						CD・DVD・Blu-ray などの光ディスクを扱います。
+						</p>
+
+						<h3>（3）フラッシュメモリ</h3>
+						<p>
+						半導体を使った不揮発性メモリで、電源を切ってもデータが残ります。<br>
+						スマートフォンやカメラなど、さまざまな機器に利用されています。
+						</p>
+
+						<h3>（4）SSD</h3>
+						<p>
+						SSDはフラッシュメモリを使った高速な記憶装置です。<br>
+						HDDよりも軽量・高速・低消費電力で、衝撃にも強いため、近年は主流になりつつあります。
+						</p>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">コンピュータの<span class = "yellow_line FontBold">五大装置（制御・演算・入力・出力・記憶）の役割</span>を説明できる。</div>
+						<div class = "check FontBold">主記憶装置（ROM・RAM）の違いを、特徴と用途を含めて説明できる。</div>
+						<div class = "check FontBold">補助記憶装置（HDD・SSD・光学ドライブ・フラッシュメモリ）の特徴と違いを理解し、用途の違いを説明できる。</div>
+					</div>
+					
+			</div>
+			<div id = "side">
+				<div class = "Side1">
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">コンピュータ5大装置</div></a>
+					<a href = "#2"><div class = "indexData1">一次元配列</div></a>
+					<a href = "#3"><div class = "indexData1">配列操作の応用</div></a>
+					<a href = "#4"><div class = "indexData1">リスト構造</div></a>
+					<a href = "#5"><div class = "indexData1">ハッシュ法</div></a>
+					<a href = "#6"><div class = "indexData1">探索法・二分木</div></a>
+					<a href = "#7"><div class = "indexData1">再帰</div></a>
+				</div>
+				<div class = "Side2">
+					<div class = "CharTitle news">新着情報</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+					<div class = "CharTitle QA">QA</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+				</div>
+			</div>
+			<div id = "footerLs"></div>
+			<div id = "footerL">
+				<div class = "FooterInfo">Training content</div>
+				<div class = "FooterSent">
+					<span class = "info">1日目：1/7(水): コンピュータ基礎知識（全2回）1回目</span><br>
+					2日目：1/8(木): コンピュータ基礎知識（全2回）2回目<br>
+					3日目：1/9(金): サーバー基礎知識（全5回）1回目<br>
+					4日目：1/13(火): サーバー基礎知識（全5回）2回目<br>
+					5日目：1/14(水): サーバー基礎知識（全5回）3回目<br>
+					6日目：1/15(木): サーバー基礎知識（全5回）4回目<br>
+					7日目：1/16(金): サーバー基礎知識（全5回）5回目<br>
+					8日目：1/19(月): PCの仕組み（全1回）1回目<br>
+					9日目：1/20(火): AWS入門（全5回）1回目<br>
+					10日目：1/21(水): AWS入門（全5回）2回目<br>
+					11日目：1/22(木): AWS入門（全5回）3回目<br>
+					12日目：1/23(金): AWS入門（全5回）4回目<br>
+					13日目：1/26(月): AWS入門（全5回）5回目<br>
+					14日目：1/27(火): サーバー構築演習（全8回）1回目<br>
+					15日目：1/28(水): サーバー構築演習（全8回）2回目<br>
+					16日目：1/29(木): サーバー構築演習（全8回）3回目<br>
+					17日目：1/30(金): サーバー構築演習（全8回）4回目<br>
+					18日目：2/2(月): サーバー構築演習（全8回）5回目<br>
+					19日目：2/3(火): サーバー構築演習（全8回）6回目<br>
+					20日目：2/4(水): サーバー構築演習（全8回）7回目<br>
+					21日目：2/5(木): サーバー構築演習（全8回）8回目<br>
+					22日目：2/6(金): ネットワーク基礎知識（全3回）1回目<br>
+					23日目：2/9(月): ネットワーク基礎知識（全3回）2回目<br>
+					24日目：2/10(火): ネットワーク基礎知識（全3回）3回目<br>
+					25日目：2/12(木): LPIC1資格対策（全6回）1回目<br>
+					26日目：2/13(金): LPIC1資格対策（全6回）2回目<br>
+					27日目：2/16(月): LPIC1資格対策（全6回）3回目<br>
+					28日目：2/17(火): LPIC1資格対策（全6回）4回目<br>
+					29日目：2/18(水): LPIC1資格対策（全6回）5回目<br>
+					30日目：2/19(木): LPIC1資格対策（全6回）6回目<br>
+					31日目：2/20(金): クライアントPC知識（全1回）1回目<br>
+					32日目：2/24(火): セキュリティ対策（全3回）1回目<br>
+					33日目：2/25(水): セキュリティ対策（全3回）2回目<br>
+					34日目：2/26(木): セキュリティ対策（全3回）3回目<br>
+					35日目：2/27(金): 総合実技課題（全1回）1回目<br>
+				</div>
+			</div>
+			<div id = "footerR">
+				<div class = "FooterInfo">Information</div>
+				<div class = "FooterSent">
+					--
+				</div>
+			</div>
+			<div id = "footerRs"></div>
+			<div id = "CopyR">&copy;2026 ANTS. All rights reserved.</div>
+			<div class = "ToTop"><a href = "#wrapper"></a></div>
+		</div>
+	</body>
+</html>
