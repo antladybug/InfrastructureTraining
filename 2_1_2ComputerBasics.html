@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>コンピュータ基礎知識2</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
+		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
+		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
+			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
+			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
+			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
+			<div id = "padding"></div>
+			<div id = "pan">
+				<ul>
+					<li class = "panList">
+						<a href = "index.html">Home</a>
+					</li>
+					<li class = "panList">
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						コンピュータ基礎知識2
+					</li>
+				</ul>
+			</div>
+			<div id = "content">
+				<div class = "title"></div>
+				<div class = "StepNum FontBold">コンピュータ基礎知識2</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">ファイル交換</div>
+						<div>
+							<div class="section">
+								<h2>【ファイル共有・圧縮】</h2>
+
+								<div style="margin-top:1rem;">
+									現代の情報社会では、企業だけでなく個人でも複数のコンピュータ同士で
+									データをやりとりする機会が増えています。
+									そのため、データを安全かつ効率よく共有する仕組みを理解することが重要です。
+								</div>
+
+								<div style="margin-top:1rem;">
+									ファイル共有ソフトウェアは、
+									<span style="color:red;">限られた利用者間でファイルを共有する</span>ためのソフトウェアです。
+									たとえば、社内メンバーだけで資料を共有する場合などに利用されます。
+								</div>
+
+								<div style="margin-top:1rem;">
+									ファイル交換ソフトウェアは、
+									<span style="color:red;">不特定多数の利用者同士でファイルを送受信する</span>ための仕組みです。
+									サーバを介さず、クライアント同士で直接やりとりする点が特徴です。
+									（P2P方式と呼ばれることもあります）
+								</div>
+
+								<div style="margin-top:1rem;">
+									グループウェアは、組織内のネットワークを活用し、
+									<span style="color:red;">情報共有やコミュニケーションを円滑にする</span>ためのソフトウェアです。
+									スケジュール共有、掲示板、チャットなどが代表的な機能です。
+								</div>
+							</div>
+
+							<div class="section">
+								<h2>（1）圧縮方式</h2>
+
+								<div style="margin-top:1rem;">
+									複数のファイルや大容量データを他のコンピュータへ送るときは、
+									<span style="color:red;">データを圧縮して転送</span>すると効率が良くなります。
+									圧縮することでデータ量が小さくなり、転送時間の短縮につながります。
+									受け取った側は「解凍」することで元のデータに戻せます。
+								</div>
+
+								<div style="margin-top:1rem;">
+									可逆圧縮とは、
+									<span style="color:red;">元のデータを完全に復元できる圧縮方式</span>のことです。
+									代表例：ZIP形式、LZH形式  
+									（文書ファイルやプログラムなど、内容を失いたくないデータに向いています）
+								</div>
+
+								<div style="margin-top:1rem;">
+									非可逆圧縮とは、
+									<span style="color:red;">元のデータを完全には復元できない圧縮方式</span>です。
+									圧縮時に一部の情報を削除するため、
+									<span style="color:red;">高い圧縮率</span>を実現できます。
+									代表例：JPEG（画像）、MP3（音声）  
+									（人間が気づきにくい部分を削ることで、容量を大幅に減らします）
+								</div>
+
+								<div style="margin-top:1rem;">
+									圧縮率とは、
+									<span style="color:red;">圧縮後のデータ量が圧縮前のデータ量に対してどれくらい小さくなったか</span>
+									を示す割合です。  
+									圧縮率が高いほどデータは小さくなりますが、
+									<span style="color:red;">圧縮処理に時間がかかる</span>傾向があります。
+								</div>
+							</div>
+							<div class="section" style="margin-top:1rem; background-color: khaki; border-radius: 3px; padding: .7rem;">
+								<h2>【圧縮率の計算例】</h2>
+
+								<div style="margin-top:1rem;">
+									圧縮率とは、データを圧縮したときに
+									<span style="color:darkred;">どれくらい小さくなったか</span>
+									を表す割合です。ビギナーの方は「圧縮すると数字が小さくなる」という感覚を持つと理解しやすいです。
+								</div>
+
+								<div style="margin-top:1rem;">
+									圧縮率の計算式は次のとおりです。<br>
+									<span style="color:darkred;">圧縮率 ＝ 圧縮後のサイズ ÷ 圧縮前のサイズ × 100</span>
+								</div>
+
+								<div style="margin-top:1rem;">
+									ここでは、実際の数字を使って計算してみます。
+								</div>
+
+								<div style="margin-top:1rem;">
+									● 圧縮前のデータ：100MB<br>
+									● 圧縮後のデータ：40MB
+								</div>
+
+								<div style="margin-top:1rem;">
+									この場合の圧縮率は次のように計算できます。
+								</div>
+
+								<div style="margin-top:1rem;">
+									40 ÷ 100 × 100 ＝ <span style="color:darkred;">40％</span>
+								</div>
+
+								<div style="margin-top:1rem;">
+									つまり、このデータは
+									<span style="color:darkred;">元の40％の大きさまで小さくなった</span>
+									ということです。  
+									逆に言えば、<span style="color:darkred;">60％分が削減された</span>というイメージです。
+								</div>
+
+								<div style="margin-top:1rem;">
+									ビギナー向けの覚え方としては、  
+									<span style="color:darkred;">「圧縮率が小さいほど、よく圧縮されている」</span>  
+									と理解すると混乱しにくいです。
+								</div>
+
+								<div style="margin-top:1rem;">
+									また、圧縮率が高いほど処理に時間がかかる傾向があります。  
+									これは、データを細かく分析して小さくするためで、  
+									<span style="color:darkred;">高圧縮＝高負荷</span> と覚えておくと便利です。
+								</div>
+							</div>
+						</div>
+						<div class="section" style="margin-top:1em; margin-bottom:1em;">
+							<h2>【今日の学習範囲に対応したおすすめ過去問リスト】</h2>
+							<div style="margin-bottom:1em;">
+								<h3>■ ファイル共有・ファイル交換</h3>
+								<div>● ファイル交換ソフトの特徴を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=20&s=2&no=7" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+								<div style="margin-top:0.5rem;">P2P方式の特徴やリスクが理解できているかを確認できます。</div>
+							</div>
+							<div style="margin-top:1em; margin-bottom:1em;">
+								<h3>■ グループウェア</h3>
+								<div>● グループウェアの目的を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=19&s=1&no=4" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+								<div style="margin-top:0.5rem;">情報共有・コミュニケーション支援の理解度を確認できます。</div>
+							</div>
+							<div style="margin-top:1em; margin-bottom:1em;">
+								<h3>■ 圧縮方式（可逆／非可逆）</h3>
+								<div>● 圧縮形式の特徴を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=15&s=2&no=5" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+								<div style="margin-top:0.5rem;">可逆圧縮と非可逆圧縮の違いが問われます。</div>
+							</div>
+							<div style="margin-top:1em; margin-bottom:1em;">
+								<h3>■ 圧縮率（計算問題）</h3>
+								<div>● 圧縮率の理解を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=15&s=2&no=6" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+								<div style="margin-top:0.5rem;">圧縮率の計算が理解できているかを確認できます。</div>
+							</div>
+							<div style="margin-top:1em; margin-bottom:1em;">
+								<h3>■ ネットワーク基礎（IPアドレス・サーバ）</h3>
+								<div>● IPアドレスの役割を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=18&s=1&no=3" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+								<div style="margin-top:0.8rem;">● サーバの役割を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=18&s=1&no=14" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+							</div>
+							<div style="margin-top:1em; margin-bottom:1em;">
+								<h3>■ OS・ハードウェア基礎</h3>
+								<div>● OSの役割を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=17&s=1&no=18" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+								<div style="margin-top:0.8rem;">● GPUなどハードウェアの役割を問う問題：  
+									<a href="https://www.itpassportsiken.com/bunya.php?m=15&s=1&no=1" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+								</div>
+							</div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">ファイル共有の種類と特徴</span>を理解し、
+							限られた利用者間で使う <span class="yellow_line FontBold">ファイル共有ソフト</span>と、
+							不特定多数でやりとりする <span class="yellow_line FontBold">ファイル交換ソフト</span> の違いを説明できる。
+						</div>
+						<div class = "check FontBold">
+							グループウェアの役割を理解し、
+							組織内での <span class="yellow_line FontBold">情報共有</span> や
+							<span class="yellow_line FontBold">コミュニケーション支援</span> の目的を説明できる。
+
+						</div>
+						<div class = "check FontBold">
+							圧縮方式の基本を理解し、
+							<span class="yellow_line FontBold">可逆圧縮</span> と
+							<span class="yellow_line FontBold">非可逆圧縮</span> の違い、
+							さらに <span class="yellow_line FontBold">圧縮率</span> の意味と計算例を説明できる。<br><br>
+						</div>
+					</div>
+					<div class = "WeekData">
+						<div id = "2" class = "date marginB05rem">ネットワークとアドレス管理</div>
+						<div>
+							<div class="section" style="margin-top:1em; margin-bottom:1em;">
+								<h2>【ネットワークとアドレス管理】</h2>
+								<div style="margin-top:1rem;">コンピュータがオンラインに接続するには、通信上のデータ形式ややりとりの手順など定められた<span style="color:red;">プロトコル（通信規約）</span>を守る必要があります。代表的な<span style="color:red;">TCP/IPプロトコル</span>は事実上の標準です。</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（1）IPアドレス</h3>
+									<div>IPアドレスはネットワーク上のコンピュータを識別する情報で、通信上の<span style="color:red;">住所</span>にあたります。</div>
+									<div style="margin-top:0.5rem;">グローバルIPアドレスはインターネット接続に、プライベートIPアドレスはLANなど社内ネットワークに使われます。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（2）IPアドレスの構成</h3>
+									<div>IPアドレスは<span style="color:red;">ネットワーク部</span>と<span style="color:red;">ホスト部</span>で構成されます。</div>
+									<div style="margin-top:0.5rem;">ネットワークアドレスはネットワーク全体を識別し、ホストアドレスはネットワーク内のコンピュータを識別します。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（3）サブネットマスク</h3>
+									<div>サブネットマスクはIPアドレスからネットワーク部とホスト部を取り出すための<span style="color:red;">ビットパターン</span>です。</div>
+									<div style="margin-top:0.5rem;">ネットワーク部を1、ホスト部を0にすることで区別します。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（4）MACアドレス</h3>
+									<div>MACアドレスはネットワーク機器に割り当てられる<span style="color:red;">固有番号</span>です。世界で重複しない番号で、NICに工場出荷時点で設定されます。</div>
+									<div style="margin-top:0.5rem;">12桁の16進数で表され、前半はメーカー識別子、後半は製造番号です。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（5）DHCP</h3>
+									<div>DHCPは<span style="color:red;">動的ホスト構成プロトコル</span>で、LAN上のコンピュータ起動を検知し、必要な設定を自動化します。</div>
+									<div style="margin-top:0.5rem;">家庭ではルータに内蔵され、企業では専用のDHCPサーバを設置して管理者の負担を軽減します。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（6）パケット</h3>
+									<div>パケットは通信過程で分割される一定長の<span style="color:red;">データ単位</span>です。</div>
+									<div style="margin-top:0.5rem;">パケット交換方式はインターネットで広く利用され、回線の連続占有を避ける効果があります。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（7）SSID</h3>
+									<div>SSIDは無線LANの<span style="color:red;">ネットワーク識別子</span>で、接続対象のアクセスポイントを特定します。</div>
+									<div style="margin-top:0.5rem;">最大32文字のASCIIコードで表示され、ESSIDは複数AP環境に対応する拡張版です。</div>
+								</div>
+							</div>
+
+							<div class="section" style="margin-top:1em; margin-bottom:1em;">
+								<h2>【通信性能と接続方式】</h2>
+								<div style="margin-top:1rem;">通信性能は<span style="color:red;">通信速度・伝送効率・転送時間</span>などで評価されます。待ち時間が少ないほど快適です。</div>
+
+								<div style="margin-top:1rem;">
+									<h3>通信速度</h3>
+									<div>通信速度はデータ伝送の速さで、単位は<span style="color:red;">bps</span>です。</div>
+									<div style="margin-top:0.5rem;">例：1Gbps＝1秒間に10億ビットを転送。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>伝送効率</h3>
+									<div>伝送効率は伝送データのうち<span style="color:red;">有用なデータの割合</span>です。</div>
+									<div style="margin-top:0.5rem;">不要な通信データを破棄することで効率を上げます。</div>
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>転送時間</h3>
+									<div>転送時間は送信元から受信者へデータを伝送するのにかかった時間です。</div>
+									<div style="margin-top:0.5rem;">例：オンラインストレージからダウンロード完了までの時間。</div>
+								</div>
+							</div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							ネットワーク識別の基本を説明できる
+							TCP/IPプロトコルの役割を理解し、
+							<span class="yellow_line FontBold">IPアドレスの種類</span>（グローバル/プライベート）と
+							<span class="yellow_line FontBold">構成</span>（ネットワーク部/ホスト部）を説明できる。
+						</div>
+						<div class = "check FontBold">
+						ネットワーク管理の仕組みを理解できる
+						<span class="yellow_line FontBold">サブネットマスク</span>による区分けの意味を説明できる。
+						<span class="yellow_line FontBold">MACアドレス</span>の特徴（世界で一意の番号）を理解できる。
+						<span class="yellow_line FontBold">DHCP</span>による自動設定の仕組みを説明できる。
+						</div>
+						<div class = "check FontBold">
+						通信性能の評価指標を説明できる
+						<span class="yellow_line FontBold">通信速度（bps）</span>、
+						<span class="yellow_line FontBold">伝送効率</span>、
+						<span class="yellow_line FontBold">転送時間</span>の意味を理解できる。
+						さらに、<span class="yellow_line FontBold">パケット交換方式</span>や
+						<span class="yellow_line FontBold">SSID</span>によるネットワーク識別の仕組みを説明できる。<br><br>
+						</div>
+					</div>
+					<div class = "WeekData">
+						<div id = "3" class = "date marginB05rem">ファイルシステム</div>
+						<div>
+							<div class="section" style="margin-top:1em; margin-bottom:1em;">
+								<h2>【ファイルとディレクトリ】</h2>
+
+								<div style="margin-top:1rem;">
+									コンピュータが使うプログラムやデータは、<span style="color:red;">ドライブ</span>に格納されます。  
+									ファイルは<span style="color:red;">ディレクトリ（フォルダ）</span>と呼ばれる構造で管理され、階層的に整理されています。
+								</div>
+
+								<div style="margin-top:1rem;">
+									ドライブの直下には<span style="color:red;">ルートディレクトリ</span>があり、そこからサブディレクトリやファイルが枝分かれして配置されます。  
+									この仕組みは「木の幹から枝が伸びる」イメージで理解すると分かりやすいです。
+								</div>
+
+								<div style="margin-top:1rem;">
+									利用者はアクセス位置を指定できます。現在アクセスしている場所を<span style="color:red;">カレントディレクトリ</span>と呼び、そこから上位のディレクトリや下位のサブディレクトリへ移動することが可能です。  
+									例：Windowsでは「cd ..」で一つ上のディレクトリに移動できます。
+								</div>
+
+								<div style="margin-top:1rem;">
+									<h3>（1）ワイルドカード</h3>
+									<div>ワイルドカードとは、検索や指定に使う<span style="color:red;">特殊文字</span>のことです。ファイル名や文字列の一部を柔軟に指定できます。</div>
+									<div style="margin-top:0.5rem;">● <span style="color:red;">*</span> ：0文字以上の不特定文字を表す  
+										例：「*.txt」 → すべてのテキストファイルを検索</div>
+									<div style="margin-top:0.5rem;">● <span style="color:red;">?</span> ：1文字の不特定文字を表す  
+										例：「file?.doc」 → 「file1.doc」「fileA.doc」などを検索</div>
+									<div style="margin-top:0.5rem;">ワイルドカードを使うと、ファイル名を正確に覚えていなくても検索できるので便利です。</div>
+								</div>
+							</div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+						コンピュータのファイルの階層構造、<span class="yellow_line FontBold">ルートディレクトリ</span>や<span class="yellow_line FontBold">カレントディレクトリ</span>の仕組みを理解できる。
+						</div>
+						<div class = "check FontBold">
+						利用者が階層を移動する方法を説明でき、<span class="yellow_line FontBold">ディレクトリ操作</span>の基本を身につけられる。
+						</div>
+						<div class = "check FontBold">
+						検索では<span class="yellow_line FontBold">ワイルドカード（* と ?）</span>の意味を理解し、ファイル指定に活用できる。
+						</div>
+					</div>
+			</div>
+			<div id = "side">
+				<div class = "Side1">
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">ファイル交換</div></a>
+					<a href = "#2"><div class = "indexData1">ネットワークとアドレス管理</div></a>
+					<a href = "#3"><div class = "indexData1">ファイルシステム</div></a>
+				</div>
+				<div class = "Side2">
+					<div class = "CharTitle news">新着情報</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+					<div class = "CharTitle QA">QA</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+				</div>
+			</div>
+			<div id = "footerLs"></div>
+			<div id = "footerL">
+				<div class = "FooterInfo">Training content</div>
+				<div class = "FooterSent">
+					<span class = "info">1日目：1/7(水): コンピュータ基礎知識（全2回）1回目</span><br>
+					2日目：1/8(木): コンピュータ基礎知識（全2回）2回目<br>
+					3日目：1/9(金): サーバー基礎知識（全5回）1回目<br>
+					4日目：1/13(火): サーバー基礎知識（全5回）2回目<br>
+					5日目：1/14(水): サーバー基礎知識（全5回）3回目<br>
+					6日目：1/15(木): サーバー基礎知識（全5回）4回目<br>
+					7日目：1/16(金): サーバー基礎知識（全5回）5回目<br>
+					8日目：1/19(月): PCの仕組み（全1回）1回目<br>
+					9日目：1/20(火): AWS入門（全5回）1回目<br>
+					10日目：1/21(水): AWS入門（全5回）2回目<br>
+					11日目：1/22(木): AWS入門（全5回）3回目<br>
+					12日目：1/23(金): AWS入門（全5回）4回目<br>
+					13日目：1/26(月): AWS入門（全5回）5回目<br>
+					14日目：1/27(火): サーバー構築演習（全8回）1回目<br>
+					15日目：1/28(水): サーバー構築演習（全8回）2回目<br>
+					16日目：1/29(木): サーバー構築演習（全8回）3回目<br>
+					17日目：1/30(金): サーバー構築演習（全8回）4回目<br>
+					18日目：2/2(月): サーバー構築演習（全8回）5回目<br>
+					19日目：2/3(火): サーバー構築演習（全8回）6回目<br>
+					20日目：2/4(水): サーバー構築演習（全8回）7回目<br>
+					21日目：2/5(木): サーバー構築演習（全8回）8回目<br>
+					22日目：2/6(金): ネットワーク基礎知識（全3回）1回目<br>
+					23日目：2/9(月): ネットワーク基礎知識（全3回）2回目<br>
+					24日目：2/10(火): ネットワーク基礎知識（全3回）3回目<br>
+					25日目：2/12(木): LPIC1資格対策（全6回）1回目<br>
+					26日目：2/13(金): LPIC1資格対策（全6回）2回目<br>
+					27日目：2/16(月): LPIC1資格対策（全6回）3回目<br>
+					28日目：2/17(火): LPIC1資格対策（全6回）4回目<br>
+					29日目：2/18(水): LPIC1資格対策（全6回）5回目<br>
+					30日目：2/19(木): LPIC1資格対策（全6回）6回目<br>
+					31日目：2/20(金): クライアントPC知識（全1回）1回目<br>
+					32日目：2/24(火): セキュリティ対策（全3回）1回目<br>
+					33日目：2/25(水): セキュリティ対策（全3回）2回目<br>
+					34日目：2/26(木): セキュリティ対策（全3回）3回目<br>
+					35日目：2/27(金): 総合実技課題（全1回）1回目<br>
+				</div>
+			</div>
+			<div id = "footerR">
+				<div class = "FooterInfo">Information</div>
+				<div class = "FooterSent">
+					--
+				</div>
+			</div>
+			<div id = "footerRs"></div>
+			<div id = "CopyR">&copy;2026 ANTS. All rights reserved.</div>
+			<div class = "ToTop"><a href = "#wrapper"></a></div>
+		</div>
+	</body>
+</html>
