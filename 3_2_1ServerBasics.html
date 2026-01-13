@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>サーバ基礎知識1</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
+		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
+		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
+			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
+			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
+			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
+			<div id = "padding"></div>
+			<div id = "pan">
+				<ul>
+					<li class = "panList">
+						<a href = "index.html">Home</a>
+					</li>
+					<li class = "panList">
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						サーバ基礎知識1
+					</li>
+				</ul>
+			</div>
+			<div id = "content">
+				<div class = "title">サーバ基礎知識1</div>
+				<div class = "StepNum FontBold">サーバの概要</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">新しいサーバの教本</div>
+						<div>
+							「いちばんやさしい新しいサーバーの教本」(以降、サーバ教本)の
+							Chapter1を読解してレポートにまとめてください。
+							<div class = "TextImgServBook"></div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">サーバの概要と必要性</span>を知り、説明できる。
+						</div>
+						<div class = "check FontBold">
+							サーバの<span class = "yellow_line FontBold">種類とその役割</span>を知り、説明できる。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">クラウド</span>の特徴と利点を知り、説明できる。<br><br>
+						</div>
+						<div id = "2" class = "date marginB05rem">クラウド</div>
+						<div>
+						<div class="section" style="margin-top:1em; margin-bottom:1em;">
+							<h2>【クラウド技術の基礎とサーバとの違い】</h2>
+
+							<div style="margin-top:1rem;">
+								私たちが日常的に利用している多くのサービスは、<span style="color:red;">クラウド技術</span>によって提供されています。
+								クラウドとは、インターネットの向こう側にあるコンピュータ資源（サーバ・ストレージ・アプリケーションなど）を、
+								必要なときに必要な分だけ利用できる仕組みのことです。
+							</div>
+
+							<div style="margin-top:1rem;">
+								クラウドの基盤には必ず<span style="color:red;">サーバ</span>が存在します。
+								サーバは、データの保存、アプリケーションの実行、利用者からの要求への応答など、
+								特定の役割を持つコンピュータのことです。
+								従来は企業が自社内にサーバを設置して運用していましたが、クラウドではこれらを
+								インターネット経由でサービスとして利用します。
+							</div>
+
+							<div style="margin-top:1rem;">
+								つまり、<span style="color:red;">サーバは「役割を持つコンピュータ」</span>を指し、
+								<span style="color:red;">クラウドは「そのコンピュータ資源をサービスとして提供する形態」</span>を指します。
+								この違いを押さえることで、クラウド技術の全体像が理解しやすくなります。
+							</div>
+						</div>
+
+
+						<div class="section" style="margin-top:1em; margin-bottom:1em;">
+							<h2>【オンプレミスとの違い】</h2>
+
+							<div style="margin-top:1rem;">
+								クラウドと対比される概念として、<span style="color:red;">オンプレミス（On-Premises）</span>があります。
+								オンプレミスとは、企業や組織が自社内にサーバやネットワーク機器を設置し、
+								自ら管理・運用する方式のことです。
+							</div>
+
+							<div style="margin-top:1rem;">
+								オンプレミスでは、機器の購入・設置・保守・障害対応などを自社で行う必要があります。
+								そのため、自由度は高いものの、費用や管理負担が大きくなりやすい特徴があります。
+							</div>
+
+							<div style="margin-top:1rem;">
+								これに対してクラウドでは、<span style="color:red;">機器の管理をサービス提供者が担当</span>するため、
+								利用者は必要な機能を契約し、インターネット越しに利用するだけで済みます。
+								この違いにより、クラウドは導入のしやすさや柔軟性の面で広く利用されています。
+							</div>
+						</div>
+
+
+						<div class="section" style="margin-top:1em; margin-bottom:1em;">
+							<h2>【クラウド技術が使われている代表的なサービス】</h2>
+
+							<div style="margin-top:1rem;">
+								クラウド技術は、企業向けから個人向けまで幅広いサービスに利用されています。
+								企業向けの代表例としては、
+								<span style="color:red;">Amazon Web Services（AWS）</span>、
+								<span style="color:red;">Microsoft Azure</span>、
+								<span style="color:red;">Google Cloud</span> などがあります。
+								これらはサーバ、データベース、AI機能などをインターネット越しに提供しています。
+							</div>
+
+							<div style="margin-top:1rem;">
+								個人向けのサービスにもクラウドが活用されています。
+								たとえば、
+								<span style="color:red;">Google ドライブ</span>、
+								<span style="color:red;">Microsoft OneDrive</span>、
+								<span style="color:red;">Apple iCloud</span> などのオンラインストレージでは、
+								写真や文書をインターネット上のサーバに保存し、どこからでもアクセスできます。
+							</div>
+
+							<div style="margin-top:1rem;">
+								また、
+								<span style="color:red;">Gmail</span> や <span style="color:red;">Outlook.com</span> のWebメール、
+								<span style="color:red;">Slack</span> や <span style="color:red;">Microsoft Teams</span> のコミュニケーションツールも、
+								クラウド上で動作するサービスです。
+								利用者はアプリやブラウザを通じてアクセスするだけで、メール送受信やチャット、会議などの機能を利用できます。
+							</div>
+						</div>
+
+
+						<div class="section" style="margin-top:1em; margin-bottom:1em;">
+							<h2>【クラウド技術の利点】</h2>
+
+							<div style="margin-top:1rem;">
+								クラウドの大きな利点の一つは、<span style="color:red;">初期費用や管理負担の軽減</span>です。
+								サーバ機器の購入や保守を自社で行う必要がなく、サービス提供者が管理を担当します。
+							</div>
+
+							<div style="margin-top:1rem;">
+								もう一つの利点は、<span style="color:red;">柔軟なスケーリング</span>です。
+								アクセスが増えた場合でも、必要に応じてサーバ資源を迅速に増減できるため、
+								サービス停止のリスクを抑えることができます。
+							</div>
+
+							<div style="margin-top:1rem;">
+								さらに、クラウドでは<span style="color:red;">場所にとらわれず利用できる</span>という特徴があります。
+								インターネット接続さえあれば、職場・自宅・外出先など、どこからでも同じデータやサービスにアクセスできます。
+							</div>
+						</div>
+
+
+						<div class="section" style="margin-top:1em; margin-bottom:1em;">
+							<h2>【まとめ：クラウドとサーバ、オンプレミスの関係】</h2>
+
+							<div style="margin-top:1rem;">
+								クラウドは、<span style="color:red;">サーバやストレージなどのコンピュータ資源をインターネット経由で提供する仕組み</span>であり、
+								オンプレミスはそれらを<span style="color:red;">自社内で運用する方式</span>です。
+								両者の違いを理解することで、ITサービスの構成や選択の判断がしやすくなります。
+							</div>
+
+							<div style="margin-top:1rem;">
+								日常生活でも、<span style="color:red;">Google ドライブに写真を保存する</span>、
+								<span style="color:red;">Gmailでメールを送受信する</span>、
+								<span style="color:red;">Teamsでオンライン会議を行う</span>など、
+								多くの場面でクラウド技術が活用されています。
+							</div>
+						</div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class="yellow_line FontBold">クラウド技術の基本概念</span>を理解し、サーバとの関係や役割の違いを説明できる。
+						</div>
+						<div class = "check FontBold">
+							クラウドと<span class="yellow_line FontBold">オンプレミス</span>の特徴・利点・違いを整理し、状況に応じた使い分けを説明できる。
+						</div>
+						<div class = "check FontBold">
+							クラウドが利用されている<span class="yellow_line FontBold">代表的なサービス（AWS・Azure・Google Cloud・iCloud など）</span>を挙げ、その仕組みと利用場面を説明できる。<br><br>
+						</div>
+						<div id = "3" class = "date marginB05rem">クラウドの種類</div>
+						<div>
+						<div class="section" style="margin-top:1em; margin-bottom:1em;">
+							<h2>【クラウドサービスの主な提供形態】</h2>
+
+							<div style="margin-top:1rem; margin-bottom:1rem;">
+								<h3>■ SaaS（Software as a Service）</h3>
+								<div>
+									SaaSは、クラウド上で提供されるアプリケーションソフトウェアを、
+									利用者がインターネット経由でそのまま利用できるサービス形態です。
+									<span style="color:red;">利用者はアプリをインストールしたり更新したりする必要がなく、常に最新の機能を利用できます。</span>
+									企業においては、導入コストの削減や運用負担の軽減につながる点が特徴です。
+								</div>
+								<div style="margin-top:0.5rem;">
+									【例】Gmail、Microsoft 365、Google Workspace、Salesforce
+								</div>
+							</div>
+
+							<div style="margin-top:1rem; margin-bottom:1rem;">
+								<h3>■ PaaS（Platform as a Service）</h3>
+								<div>
+									PaaSは、アプリケーションを開発・実行するための
+									<span style="color:red;">プラットフォーム（開発環境・実行環境）をクラウド上で提供するサービス</span>です。
+									利用者はサーバやOSの管理を行う必要がなく、アプリケーション開発に専念できます。
+									開発効率の向上や、環境構築の手間削減に効果があります。
+								</div>
+								<div style="margin-top:0.5rem;">
+									【例】Azure App Service、Google App Engine、Heroku
+								</div>
+							</div>
+
+							<div style="margin-top:1rem; margin-bottom:1rem;">
+								<h3>■ IaaS（Infrastructure as a Service）</h3>
+								<div>
+									IaaSは、サーバ・ストレージ・ネットワークなどの
+									<span style="color:red;">基盤となるインフラをクラウド上で提供するサービス</span>です。
+									利用者はOSやミドルウェアの設定・管理を自由に行えるため、
+									オンプレミスに近い柔軟性を保ちながらクラウドの利点を活用できます。
+									システム構成を細かく調整したい場合に適しています。
+								</div>
+								<div style="margin-top:0.5rem;">
+									【例】AWS EC2、Azure Virtual Machines、Google Compute Engine
+								</div>
+							</div>
+
+							<div style="margin-top:1rem; margin-bottom:1rem;">
+								<h3>■ DaaS（Desktop as a Service）</h3>
+								<div>
+									DaaSは、クラウド上に構築された仮想デスクトップ環境を提供するサービスです。
+									<span style="color:red;">利用者はインターネットを通じて、どこからでも同じデスクトップ環境にアクセスできます。</span>
+									端末に依存しない作業環境を実現できるため、テレワークやセキュリティ強化に有効です。
+								</div>
+								<div style="margin-top:0.5rem;">
+									【例】Amazon WorkSpaces、Azure Virtual Desktop
+								</div>
+							</div>
+
+							<div style="margin-top:1rem; margin-bottom:1rem;">
+								<h3>■ オンラインストレージ（SaaS型ストレージ）</h3>
+								<div>
+									オンラインストレージは、ファイルをクラウド上に保存し、
+									<span style="color:red;">インターネット環境があればどこからでもアクセスできるサービス</span>です。
+									バックアップ、共有、共同編集などに活用され、個人利用から企業利用まで幅広く普及しています。
+									データの保全性や利便性の向上に寄与する点が特徴です。
+								</div>
+								<div style="margin-top:0.5rem;">
+									【例】Google Drive、OneDrive、Dropbox、iCloud
+								</div>
+							</div>
+
+						</div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							クラウドサービスの主要な提供形態である <span class="yellow_line FontBold">SaaS・PaaS・IaaS</span> の特徴と役割の違いを説明できる。
+						</div>
+						<div class = "check FontBold">
+							<span class="yellow_line FontBold">DaaS</span> や <span class="yellow_line FontBold">オンラインストレージ</span> の仕組みと利用目的を理解し、具体的なサービス例と結びつけて説明できる。
+						</div>
+						<div class = "check FontBold">
+							各クラウドサービスの提供範囲や管理範囲の違いを整理し、利用場面に応じた適切なサービス選択について説明できる。<br><br>
+						</div>
+						<h2>【今日の学習範囲に対応したおすすめ過去問リスト】</h2>
+						<div style="margin-bottom:1em;">
+							<h3>■ クラウドサービスの基礎</h3>
+								<a href="https://www.itpassportsiken.com/kakomon/29_aki/q11.html" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+						</div>
+						<div style="margin-bottom:1em;">
+						<h3>■ クラウドサービスの基礎</h3>
+							<a href="https://www.fe-siken.com/kakomon/24_aki/q63.html" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+						</div>
+						<div style="margin-bottom:1em;">
+						<h3>■ クラウドサービスの基礎</h3>
+							<a href="https://www.itpassportsiken.com/kakomon/27_aki/q5.html" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+						</div>
+						<div style="margin-bottom:1em;">
+						<h3>■ クラウドサービスの基礎</h3>
+							<a href="https://www.fe-siken.com/kakomon/29_aki/q14.html" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+						</div>
+						<div style="margin-bottom:1em;">
+						<h3>■ クラウドサービスの基礎</h3>
+							<a href="https://www.itpassportsiken.com/kakomon/21_haru/q6.html" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+						</div>
+						<div style="margin-bottom:1em;">
+						<h3>■ クラウドサービスの基礎</h3>
+							<a href="https://www.sg-siken.com/kakomon/30_haru/q45.html" target="_blank" style="color:darkred; font-weight:bold; text-decoration:underline;">こちらへ</a>
+						</div>
+					</div>
+			</div>
+			<div id = "side">
+				<div class = "Side1">
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">新しいサーバの教本</div></a>
+					<a href = "#2"><div class = "indexData1">クラウド</div></a>
+					<a href = "#3"><div class = "indexData1">クラウドの種類</div></a>
+				</div>
+				<div class = "Side2">
+					<div class = "CharTitle news">新着情報</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+					<div class = "CharTitle QA">QA</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+				</div>
+			</div>
+			<div id = "footerLs"></div>
+			<div id = "footerL">
+				<div class = "FooterInfo">Training content</div>
+				<div class = "FooterSent">
+					<span class = "info">1日目：1/7(水): コンピュータ基礎知識（全2回）1回目</span><br>
+					2日目：1/8(木): コンピュータ基礎知識（全2回）2回目<br>
+					3日目：1/9(金): サーバー基礎知識（全5回）1回目<br>
+					4日目：1/13(火): サーバー基礎知識（全5回）2回目<br>
+					5日目：1/14(水): サーバー基礎知識（全5回）3回目<br>
+					6日目：1/15(木): サーバー基礎知識（全5回）4回目<br>
+					7日目：1/16(金): サーバー基礎知識（全5回）5回目<br>
+					8日目：1/19(月): PCの仕組み（全1回）1回目<br>
+					9日目：1/20(火): AWS入門（全5回）1回目<br>
+					10日目：1/21(水): AWS入門（全5回）2回目<br>
+					11日目：1/22(木): AWS入門（全5回）3回目<br>
+					12日目：1/23(金): AWS入門（全5回）4回目<br>
+					13日目：1/26(月): AWS入門（全5回）5回目<br>
+					14日目：1/27(火): サーバー構築演習（全8回）1回目<br>
+					15日目：1/28(水): サーバー構築演習（全8回）2回目<br>
+					16日目：1/29(木): サーバー構築演習（全8回）3回目<br>
+					17日目：1/30(金): サーバー構築演習（全8回）4回目<br>
+					18日目：2/2(月): サーバー構築演習（全8回）5回目<br>
+					19日目：2/3(火): サーバー構築演習（全8回）6回目<br>
+					20日目：2/4(水): サーバー構築演習（全8回）7回目<br>
+					21日目：2/5(木): サーバー構築演習（全8回）8回目<br>
+					22日目：2/6(金): ネットワーク基礎知識（全3回）1回目<br>
+					23日目：2/9(月): ネットワーク基礎知識（全3回）2回目<br>
+					24日目：2/10(火): ネットワーク基礎知識（全3回）3回目<br>
+					25日目：2/12(木): LPIC1資格対策（全6回）1回目<br>
+					26日目：2/13(金): LPIC1資格対策（全6回）2回目<br>
+					27日目：2/16(月): LPIC1資格対策（全6回）3回目<br>
+					28日目：2/17(火): LPIC1資格対策（全6回）4回目<br>
+					29日目：2/18(水): LPIC1資格対策（全6回）5回目<br>
+					30日目：2/19(木): LPIC1資格対策（全6回）6回目<br>
+					31日目：2/20(金): クライアントPC知識（全1回）1回目<br>
+					32日目：2/24(火): セキュリティ対策（全3回）1回目<br>
+					33日目：2/25(水): セキュリティ対策（全3回）2回目<br>
+					34日目：2/26(木): セキュリティ対策（全3回）3回目<br>
+					35日目：2/27(金): 総合実技課題（全1回）1回目<br>
+				</div>
+			</div>
+			<div id = "footerR">
+				<div class = "FooterInfo">Information</div>
+				<div class = "FooterSent">
+					--
+				</div>
+			</div>
+			<div id = "footerRs"></div>
+			<div id = "CopyR">&copy;2026 ANTS. All rights reserved.</div>
+			<div class = "ToTop"><a href = "#wrapper"></a></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>サーバ基礎知識2</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
+		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
+		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
+			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
+			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
+			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
+			<div id = "padding"></div>
+			<div id = "pan">
+				<ul>
+					<li class = "panList">
+						<a href = "index.html">Home</a>
+					</li>
+					<li class = "panList">
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						サーバ基礎知識2
+					</li>
+				</ul>
+			</div>
+			<div id = "content">
+				<div class = "title">サーバ基礎知識2</div>
+				<div class = "StepNum FontBold">サーバの概要</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">新しいサーバの教本</div>
+						<div>
+							「いちばんやさしい新しいサーバーの教本」(以降、サーバ教本)の
+							<span style = "color: blue;">Chapter<span style = "font-size: 2rem;">2</span></span>を読解してレポートにまとめてください。
+							<span style = "color: red;">教本とは手順が異なる操作が多々ありますが、検索しながら問題解決しましょう。</span>
+							<div class = "TextImgServBook"></div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">virtural box</span>のインストール操作ができる。
+						</div>
+						<div class = "check FontBold">
+							サーバの<span class = "yellow_line FontBold">ubuntu</span>のインストール操作ができる。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">ubuntu</span>にログインできる。<br><br>
+						</div>
+						<div id = "2" class = "date marginB05rem">SLA</div>
+							<div class="section" style="margin-top:1.5em; margin-bottom:1.5em;">
+								<h2>SLA（Service Level Agreement）とは</h2>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										SLA（Service Level Agreement：サービスレベル合意）とは、
+										サービス提供者と利用者の間で取り交わされる、
+										<span style="color:red;">サービス品質に関する合意・契約</span>のことです。
+										どの程度の品質・性能・対応を提供するかを文書で明確に定め、
+										双方がそれを共通認識としてサービスを利用・提供します。
+									</p>
+								</div>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										もう少しイメージしやすく言うと、SLA は「サービスのダイヤ表」のようなものです。
+										電車が「この時間に動きます」「遅れたらこう対応します」と決めているように、
+										サービスも「どれくらい安定して動くか」「問題が起きたらどう対応するか」を
+										あらかじめ約束しておくことで、利用者は安心してサービスを使うことができます。
+									</p>
+								</div>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<h3>■ SLAに含まれる主な項目</h3>
+									<p>
+										SLAには、サービスの性質に応じて、さまざまな指標が含まれます。
+										代表的な例として、次のようなものがあります。
+									</p>
+									<ul style="margin-left:1.2rem;">
+										<li>サービスの提供時間・稼働時間（可用性、アップタイム）</li>
+										<li>性能に関する指標（レスポンスタイム、スループットなど）</li>
+										<li>障害発生時の対応時間・復旧時間</li>
+										<li>サポート対応時間・問い合わせへの応答時間</li>
+										<li>セキュリティやデータ保護に関する取り決め など</li>
+									</ul>
+								</div>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<h3>■ 稼働率とSLAの関係</h3>
+									<p>
+										サーバやクラウドサービスの世界では、
+										<span style="color:red;">稼働率（可用性）はSLAの中の指標のひとつ</span>として位置付けられます。
+										つまり、SLAの中で「稼働率をどの水準まで保証するか」が定められ、
+										その値に基づいてサービスの信頼性や補償条件が決まります。
+									</p>
+									<p style="margin-top:0.5rem;">
+										たとえば、あるクラウドサービスでは
+										「月間稼働率 99.9％以上を保証する」といった形でSLAに明記されます。
+										この場合、実際の稼働率がそれを下回ったときには、
+										利用料金の一部を返金するなどの対応（サービスクレジット）が行われることがあります。
+									</p>
+								</div>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										電車で例えると「10分以上遅れたら振替輸送します」という案内に近いイメージです。
+										サービスがどれだけ止まらずに動くかを数値で示し、
+										その基準を満たせなかった場合の対応まで含めて約束するのがSLAです。
+									</p>
+								</div>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<h3>■ SLAが重要とされる理由</h3>
+									<p>
+										SLAが重要とされる理由として、主に次の点が挙げられます。
+									</p>
+									<ul style="margin-left:1.2rem;">
+										<li>サービス品質の基準を明文化することで、提供者と利用者の認識を揃えられる。</li>
+										<li>トラブル発生時の対応方針や責任範囲が明確になり、不要な混乱を防げる。</li>
+										<li>稼働率や応答時間などの指標を基準に、サービスの改善や評価を行いやすくなる。</li>
+									</ul>
+								</div>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<h3>■ 稼働率を例としたSLAの具体像</h3>
+									<p>
+										実際のクラウドサービスやシステムでは、
+										稼働率（可用性）を中心としたSLAが設定されます。
+										たとえば、AWSのWell-Architectedフレームワークでは、
+										<span style="color:red;">「可用性の目標とアップタイムSLAを満たすようにアーキテクチャを設計すること」</span>
+										がベストプラクティスとして示されています。
+										可用性の目標や稼働率のSLAを定め、
+										それを達成できるようにアーキテクチャや運用を設計することが重視されています。
+									</p>
+								</div>
+								<div style="margin-top:1.5rem; margin-bottom:0.5rem;">
+									<h3>■ 参考リンク（日本語で読みやすいSLAの例）</h3>
+									<ul style="margin-left:1.2rem;">
+										<li>
+											ニフクラ（富士通クラウド）SLA<br>
+											<a href="https://pfs.nifcloud.com/sla/" target="_blank" style="color: blue;">
+												https://pfs.nifcloud.com/sla/
+											</a>
+										</li>
+										<li>
+											さくらのクラウド（さくらインターネット）SLA<br>
+											<a href="https://cloud.sakura.ad.jp/sla/" target="_blank" style="color: blue;">
+												https://cloud.sakura.ad.jp/sla/
+											</a>
+										</li>
+										<li>
+											ConoHa（GMO）SLA<br>
+											<a href="https://www.conoha.jp/sla/" target="_blank" style="color: blue;">
+												https://www.conoha.jp/sla/
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						<div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class="yellow_line FontBold">SLAの役割と目的</span>を説明できるようになる。
+						</div>
+						<div class = "check FontBold">
+							 <span class="yellow_line FontBold">SLAに含まれる主な指標</span>を挙げられるようになる。
+						</div>
+						<div class = "check FontBold">
+							<span class="yellow_line FontBold">稼働率（可用性）とSLAの関係</span>を理解し、実例を読み取れるようになる
+						</div>
+						<div>
+							<br>簡易的な理解度確認チェックのformです。
+							できる限り何も検索しないで受講してください⇒
+							<a href = "https://forms.gle/FotHsfBZXhU1fpeL8" target = "_blank">
+							<span style = "font-size: 1.5rem; color: blue;">こちら</span></a><br><br>
+						</div>
+						<div id = "3" class = "date marginB05rem">サーバの稼働率</div>
+						<div>
+							<div class="section" style="margin-top:1.5em; margin-bottom:1.5em;">
+
+								<h2>■ サーバの稼働率（可用性）とは</h2>
+
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										サーバの稼働率は、可用性という特性で表現されます。
+										これは<span style="color:red;">サーバがどれだけ止まらずに動いていたかを示す割合</span>のことです。
+										停止時間が短いほど稼働率は高くなり、サービスの信頼性も高くなります。
+									</p>
+								</div>
+
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										たとえるなら、24時間営業のコンビニが「どれだけ開いていたか」というイメージです。
+										1時間だけ閉まっていたら「ほぼ開いていたけれど、完全ではない」という状態になります。
+										サーバも同じで、<span style="color:red;">止まっていた時間が短いほど信頼性が高い</span>と言えます。
+									</p>
+								</div>
+
+								<h3>■ 稼働率の計算式</h3>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>稼働率は次の式で求められます。</p>
+									<p style="margin-left:1.2rem;">
+										稼働率 ＝ （稼働していた時間 ÷ 総運用時間） × 100
+									</p>
+									<p>
+										例：1か月（30日＝43,200分）のうち、停止時間が10分だった場合
+									</p>
+									<p style="margin-left:1.2rem;">
+										稼働率 ＝ （43,200 − 10） ÷ 43,200 × 100 ≒ 99.976%
+									</p>
+								</div>
+
+								<h3>■ 可用性を高める稼働方式の種類</h3>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										サーバの可用性を高めるためには、構成そのものを工夫する方法があります。
+										代表的な稼働方式は次の3つです。
+									</p>
+
+									<ul style="margin-left:1.2rem;">
+
+										<li>
+											<strong>① シングルシステム（単一構成）</strong><br>
+											最も基本的な構成で、サーバが1台だけで動作します。<br>
+											故障するとサービスが止まるため、可用性は高くありません。
+										</li>
+
+										<li style="margin-top:0.8rem;">
+											<strong>② デュプレックスシステム（二重化構成）</strong><br>
+											サーバを2台用意し、片方が故障してももう片方が動く仕組みです。<br>
+											「現用系」と「待機系」に分かれ、待機系は故障時にすぐ切り替わります。<br>
+											たとえるなら、レジが2台あるコンビニで、1台が壊れてももう1台で対応できる状態です。
+										</li>
+
+										<li style="margin-top:0.8rem;">
+											<strong>③ クラスタリング（多重化構成）</strong><br>
+											複数台のサーバをまとめて1つのシステムとして動かす方式です。<br>
+											1台が故障しても他のサーバが処理を引き継ぐため、可用性が非常に高い構成です。<br>
+											クラウドの「マルチAZ構成」もこの考え方に近い仕組みです。
+										</li>
+
+									</ul>
+
+									<p style="margin-top:0.5rem;">
+										このように、<span style="color:red;">構成を工夫することでMTTRを短縮したり、MTBFを実質的に延ばす</span>ことができ、
+										結果として稼働率を高めることにつながります。
+									</p>
+								</div>
+
+								<h2>MTTRとMTBF（MTTB）</h2>
+
+								<h3>■ MTTR（Mean Time To Repair：平均修復時間）</h3>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										MTTRとは、<span style="color:red;">故障が発生してから復旧するまでにかかった平均時間</span>のことです。
+										MTTRが短いほど、障害からの回復が早いサービスと言えます。
+									</p>
+									<p>
+										たとえるなら、コンビニが故障で閉店したときに「どれだけ早く再開できるか」というイメージです。
+									</p>
+								</div>
+
+								<h3>■ MTBF（Mean Time Between Failures：平均故障間隔）</h3>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>
+										MTBFとは、<span style="color:red;">故障と故障の間の平均稼働時間</span>のことです。
+										MTBFが長いほど、壊れにくく安定して動くシステムと言えます。
+									</p>
+									<p>
+										MTTB（Mean Time To Breakdown）という表現が使われることもありますが、
+										意味はほぼ同じで「故障までの平均時間」を指します。
+									</p>
+								</div>
+
+								<h3>■ 稼働率とMTTR・MTBFの関係</h3>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<p>稼働率は、MTTRとMTBFを使って次のように表すことができます。</p>
+									<p style="margin-left:1.2rem;">
+										稼働率 ＝ MTBF ÷（MTBF ＋ MTTR）
+									</p>
+									<p>
+										つまり、<span style="color:red;">壊れにくく（MTBFが長い）、直すのが早い（MTTRが短い）ほど稼働率は高くなる</span>ということです。
+									</p>
+								</div>
+
+								<h3>■ 稼働率を高めるための仕組み</h3>
+								<div style="margin-top:1rem; margin-bottom:1rem;">
+									<ul style="margin-left:1.2rem;">
+										<li>冗長構成（デュプレックス・クラスタリング）でMTTRを短縮</li>
+										<li>負荷分散（ロードバランサー）で障害の影響を局所化</li>
+										<li>自動復旧（オートヒーリング）で復旧時間を短縮</li>
+										<li>クラウドのマルチAZ構成でMTBFを実質的に延ばす</li>
+										<li>監視とアラートで障害検知を高速化</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class="yellow_line FontBold">稼働率</span> の意味と計算式を理解し、システムの可用性を定量的に説明できる。
+						</div>
+						<div class = "check FontBold">
+							<span class="yellow_line FontBold">シングルシステム</span>・<span class="yellow_line FontBold">デュプレックス</span>・<span class="yellow_line FontBold">クラスタリング</span> の違いを説明できる。
+						</div>
+						<div class = "check FontBold">
+							<span class="yellow_line FontBold">MTTR</span> と <span class="yellow_line FontBold">MTBF</span> の関係を理解し、可用性評価に活用できる。
+						</div>
+						<div>
+							<br>簡易的な理解度確認チェックのformです。
+							できる限り何も検索しないで受講してください⇒
+							<a href = "https://forms.gle/3tLnLxVrBSbawmKB9" target = "_blank">
+							<span style = "font-size: 1.5rem; color: blue;">こちら</span></a><br><br>
+						</div>
+					</div>
+			</div>
+			<div id = "side">
+				<div class = "Side1">
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">新しいサーバの教本</div></a>
+					<a href = "#2"><div class = "indexData1">SLA</div></a>
+					<a href = "#3"><div class = "indexData1">サーバの稼働率</div></a>
+				</div>
+				<div class = "Side2">
+					<div class = "CharTitle news">新着情報</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+					<div class = "CharTitle QA">QA</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+				</div>
+			</div>
+			<div id = "footerLs"></div>
+			<div id = "footerL">
+				<div class = "FooterInfo">Training content</div>
+				<div class = "FooterSent">
+					<span class = "info">1日目：1/7(水): コンピュータ基礎知識（全2回）1回目</span><br>
+					2日目：1/8(木): コンピュータ基礎知識（全2回）2回目<br>
+					3日目：1/9(金): サーバー基礎知識（全5回）1回目<br>
+					4日目：1/13(火): サーバー基礎知識（全5回）2回目<br>
+					5日目：1/14(水): サーバー基礎知識（全5回）3回目<br>
+					6日目：1/15(木): サーバー基礎知識（全5回）4回目<br>
+					7日目：1/16(金): サーバー基礎知識（全5回）5回目<br>
+					8日目：1/19(月): PCの仕組み（全1回）1回目<br>
+					9日目：1/20(火): AWS入門（全5回）1回目<br>
+					10日目：1/21(水): AWS入門（全5回）2回目<br>
+					11日目：1/22(木): AWS入門（全5回）3回目<br>
+					12日目：1/23(金): AWS入門（全5回）4回目<br>
+					13日目：1/26(月): AWS入門（全5回）5回目<br>
+					14日目：1/27(火): サーバー構築演習（全8回）1回目<br>
+					15日目：1/28(水): サーバー構築演習（全8回）2回目<br>
+					16日目：1/29(木): サーバー構築演習（全8回）3回目<br>
+					17日目：1/30(金): サーバー構築演習（全8回）4回目<br>
+					18日目：2/2(月): サーバー構築演習（全8回）5回目<br>
+					19日目：2/3(火): サーバー構築演習（全8回）6回目<br>
+					20日目：2/4(水): サーバー構築演習（全8回）7回目<br>
+					21日目：2/5(木): サーバー構築演習（全8回）8回目<br>
+					22日目：2/6(金): ネットワーク基礎知識（全3回）1回目<br>
+					23日目：2/9(月): ネットワーク基礎知識（全3回）2回目<br>
+					24日目：2/10(火): ネットワーク基礎知識（全3回）3回目<br>
+					25日目：2/12(木): LPIC1資格対策（全6回）1回目<br>
+					26日目：2/13(金): LPIC1資格対策（全6回）2回目<br>
+					27日目：2/16(月): LPIC1資格対策（全6回）3回目<br>
+					28日目：2/17(火): LPIC1資格対策（全6回）4回目<br>
+					29日目：2/18(水): LPIC1資格対策（全6回）5回目<br>
+					30日目：2/19(木): LPIC1資格対策（全6回）6回目<br>
+					31日目：2/20(金): クライアントPC知識（全1回）1回目<br>
+					32日目：2/24(火): セキュリティ対策（全3回）1回目<br>
+					33日目：2/25(水): セキュリティ対策（全3回）2回目<br>
+					34日目：2/26(木): セキュリティ対策（全3回）3回目<br>
+					35日目：2/27(金): 総合実技課題（全1回）1回目<br>
+				</div>
+			</div>
+			<div id = "footerR">
+				<div class = "FooterInfo">Information</div>
+				<div class = "FooterSent">
+					--
+				</div>
+			</div>
+			<div id = "footerRs"></div>
+			<div id = "CopyR">&copy;2026 ANTS. All rights reserved.</div>
+			<div class = "ToTop"><a href = "#wrapper"></a></div>
+		</div>
+	</body>
+</html>
