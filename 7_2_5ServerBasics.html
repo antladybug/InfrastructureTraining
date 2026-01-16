@@ -63,21 +63,115 @@
 						<div class = "check FontBold">
 							<span class = "yellow_line FontBold">リモートログイン</span>ができる。<br><br>
 						</div>
-						<!-- div id = "2" class = "date marginB05rem">並列稼働</div>
+						<div id = "2" class = "date marginB05rem">直列と並列</div>
 						<div>
-							
+							<div style="margin-bottom: 30px; padding: 20px; border-bottom: 2px solid #333;">
+							<h2 style="color: #000; font-size: 1.5em; margin-top: 0;">なぜサーバを「複数」動かすのか？</h2>
+							<div style="color: #000;">
+							1台のサーバだけでシステムを動かしていると、その1台が故障した瞬間にすべてのサービスが止まってしまいます。<br>
+							サーバを複数組み合わせる目的は、<span style="color: #d32f2f; font-weight: bold;">「もしもの故障時に備えること」</span>と<span style="color: #d32f2f; font-weight: bold;">「処理を分担して安定させること」</span>にあります。
+							</div>
+							</div>
+							<!-- 直列の解説 -->
+							<div style="margin-bottom: 40px;">
+							<h3 style="color: #000; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 10px;">直列（ちょくれつ）構成</h3>
+							<div style="margin-bottom: 15px;">
+							すべての機器が順番に並んでおり、バトンを繋ぐように処理を行う形です。
+							</div>
+							<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+							<!-- メリット -->
+							<div style="flex: 1; min-width: 300px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+							<div style="font-weight: bold; color: #000; margin-bottom: 10px;">▼ メリット</div>
+							<div style="color: #000;">
+							・構成がシンプルで、準備するサーバも最低限で済むため<span style="color: #d32f2f; font-weight: bold;">コストが低い</span>。
+							</div>
+							</div>
+							<!-- デメリット -->
+							<div style="flex: 1; min-width: 300px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+							<div style="font-weight: bold; color: #000; margin-bottom: 10px;">▼ デメリット</div>
+							<div style="color: #000;">
+							・1台でも故障すると全体が止まる。機器を増やすほど、<span style="color: #d32f2f; font-weight: bold;">故障のリスク（止まる確率）が高まる</span>。
+							</div>
+							</div>
+							</div>
+							</div>
+
+							<!-- 並列の解説 -->
+							<div style="margin-bottom: 40px;">
+							<h3 style="color: #000; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 10px;">並列（へいれつ）構成</h3>
+							<div style="margin-bottom: 15px;">
+							同じ役割のサーバを複数並べ、どれか1つでも動いていればOKという形です。
+							</div>
+
+							<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+							<!-- メリット -->
+							<div style="flex: 1; min-width: 300px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+							<div style="font-weight: bold; color: #000; margin-bottom: 10px;">▼ メリット</div>
+							<div style="color: #000;">
+							・1台が壊れても、他のサーバがカバーするので<span style="color: #d32f2f; font-weight: bold;">サービスが止まらない</span>。<br>
+							・機器を増やすほど、<span style="color: #d32f2f; font-weight: bold;">全体の信頼性が高まる</span>。
+							</div>
+							</div>
+							<div style="flex: 1; min-width: 300px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+							<div style="font-weight: bold; color: #000; margin-bottom: 10px;">▼ デメリット</div>
+							<div style="color: #000;">
+							・予備のサーバが必要になるため、その分<span style="color: #d32f2f; font-weight: bold;">費用（コスト）がかかる</span>。
+							</div>
+							</div>
+							</div>
+							</div>
+							<div style="background-color: #f9f9f9; padding: 20px; border: 1px dashed #333; border-radius: 10px; color: #000;">
+							<div style="font-weight: bold; margin-bottom: 5px;">【理解のヒント】</div>
+							<div>
+							・「絶対に止めたくないシステム」は、コストをかけてでも<span style="color: #d32f2f; font-weight: bold;">並列</span>にします。<br>
+							・「コスト優先で多少の停止は許容できる」場合は<span style="color: #d32f2f; font-weight: bold;">直列</span>が選ばれることもあります。
+							</div>
+							</div><br><br>
+							<div style="margin-bottom: 40px;">
+							<h2 style="color: #000; font-size: 20px; border-left: 4px solid #333; padding-left: 10px; margin-bottom: 15px;">1. 直列構成</h2>
+							<p style="color: #000;">すべての機器が正常に動いている必要がある構成です。<span style="color: #d32f2f; font-weight: bold;">「1箇所でも止まると、全体が止まる」</span>のが特徴です。</p>
+							<div style="background-color: #f9f9f9; border: 1px solid #ccc; padding: 20px; text-align: center; margin: 15px 0; border-radius: 4px;">
+							<span style="display: inline-block; border: 1px solid #333; padding: 5px 15px; border-radius: 4px; background: white; color: #000;">サーバA</span>
+							<span style="margin: 0 10px; color: #000;">━━━</span>
+							<span style="display: inline-block; border: 1px solid #333; padding: 5px 15px; border-radius: 4px; background: white; color: #000;">サーバB</span>
+							</div>
+							<div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ccc;">
+							<p style="margin: 0 0 5px 0; font-weight: bold; color: #000;">【計算式】</p>
+							<div style="font-size: 1.2em; text-align: center; padding: 10px 0; color: #000;">
+							全体の稼働率 ＝ <span style="color: #d32f2f; font-weight: bold;">Aの稼働率 × Bの稼働率</span>
+							</div>
+							</div>
+							</div>
+							<!-- 並列構成 -->
+							<div style="margin-bottom: 40px;">
+							<h2 style="color: #000; font-size: 20px; border-left: 4px solid #333; padding-left: 10px; margin-bottom: 15px;">2. 並列構成</h2>
+							<p style="color: #000;">どれか1つでも動いていれば、システムは継続できます。<span style="color: #d32f2f; font-weight: bold;">「故障に強い」</span>構成を作る際に使われます。</p>
+							<div style="background-color: #f9f9f9; border: 1px solid #ccc; padding: 20px; text-align: center; margin: 15px 0; border-radius: 4px;">
+							<div style="display: inline-block; vertical-align: middle; text-align: left; color: #000;">
+							┌━ <span style="display: inline-block; border: 1px solid #333; padding: 5px 15px; border-radius: 4px; background: white; margin: 5px 0;">サーバA</span> ━┐<br>
+							└━ <span style="display: inline-block; border: 1px solid #333; padding: 5px 15px; border-radius: 4px; background: white; margin: 5px 0;">サーバB</span> ━┘
+							</div>
+							</div>
+							<div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ccc;">
+							<p style="margin: 0 0 5px 0; font-weight: bold; color: #000;">【計算式】</p>
+							<div style="font-size: 1.2em; text-align: center; padding: 10px 0; color: #000;">
+							全体の稼働率 ＝ <span style="color: #d32f2f; font-weight: bold;">1 － (1 － Aの稼働率) × (1 － Bの稼働率)</span>
+							</div>
+							<p style="margin: 10px 0 0 0; font-size: 0.9em; text-align: center; color: #666;">（100%から「両方とも故障している確率」を引いて求めます）</p>
+							</div>
+							</div>
 						</div>
 						<div class = "goal">到達目標</div>
 						<div class = "check FontBold">
-							<span class="yellow_line FontBold">稼働率</span> の意味と計算式を理解し、システムの可用性を定量的に説明できる。
+							サーバを複数で稼働させるのは、1台の故障がサービス全体の停止に直結する事態を防ぎ、システムとしての信頼性と継続性を高めるためであることが理解できる。
 						</div>
 						<div class = "check FontBold">
-							<span class="yellow_line FontBold">シングルシステム</span>・<span class="yellow_line FontBold">デュプレックス</span>・<span class="yellow_line FontBold">クラスタリング</span> の違いを説明できる。
+							直列構成は仕組みが単純でコストを抑えられる一方、どこか1箇所でも壊れると全体が止まるため、台数が増えるほど停止リスクが高まることが理解できる。
 						</div>
 						<div class = "check FontBold">
-							<span class="yellow_line FontBold">MTTR</span> と <span class="yellow_line FontBold">MTBF</span> の関係を理解し、可用性評価に活用できる。
+							並列構成は予備を置くためコストは増えるが、どれか1台でも動いていれば稼働し続けられるため、故障に強いシステムを構築できる。
 						</div>
-						<div>
+						<!--div>
 							<br>簡易的な理解度確認チェックのformです。
 							できる限り何も検索しないで受講してください⇒
 							<a href = "https://forms.gle/JKhAr1pi1tdmHi9n9" target = "_blank">
@@ -89,7 +183,7 @@
 				<div class = "Side1">
 					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
 					<a href = "#1"><div class = "indexData1">新しいサーバの教本</div></a>
-					<!-- a href = "#2"><div class = "indexData1">並列稼働</div></a-->
+					<a href = "#2"><div class = "indexData1">直列と並列</div></a>
 				</div>
 				<div class = "Side2">
 					<div class = "CharTitle news">新着情報</div>
