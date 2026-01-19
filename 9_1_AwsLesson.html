@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AWS入門1</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
+		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
+		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
+			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
+			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
+			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
+			<div id = "padding"></div>
+			<div id = "pan">
+				<ul>
+					<li class = "panList">
+						<a href = "index.html">Home</a>
+					</li>
+					<li class = "panList">
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						AWS入門1
+					</li>
+				</ul>
+			</div>
+			<div id = "content">
+				<div class = "title">AWS入門1</div>
+				<div class = "StepNum FontBold">AWSの概要</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">AWS教本</div>
+						<div>
+							「図解 Amazon Web Servicesの仕組みとサービスがたった1日でよくわかる」(以降、AWS教本)の
+							<span style = "color: blue;">Chapter<span style = "font-size: 2rem;">1と2</span></span>を読解してレポートにまとめてください。<br>
+							<span style = "color: red;">※クレジットカードの登録が必須ですが、他カード情報の代替可能です。内容を理解しながら選択ください。<br></span>
+							<div class = "TextImgAWSBook"></div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWS</span>の概要を知り、説明できる。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWSサービス周辺に関わる用語</span>を知る。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWSサービスのアカウント登録</span>をする。
+						</div>
+						<br>
+						<!--div id = "2" class = "date marginB05rem">Vim</div>
+						<div>
+							<div>
+
+								<div style="margin-bottom: 30px; padding: 20px; border-bottom: 2px solid #333;">
+									<div style="color: #000;">
+										Vimは通常のエディタとは大きく異なる操作体系を持つエディタです。<br>
+										キーボードだけで高速に操作できるため、慣れるとPC作業の効率が大きく向上します。<br>
+										また、サーバ環境ではGUIが使えない場面も多く、Vimはそのような環境で非常に役立ちます。
+									</div>
+								</div>
+
+								<div style="margin-bottom: 40px;">
+									<h3 style="color: #000; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 10px;">Vimの特徴</h3>
+									<div style="color: #000; margin-bottom: 15px;">
+										Vimには「モード」という概念があり、入力する内容によって操作が切り替わります。<br>
+										この仕組みにより、マウスを使わずに高速で編集ができるようになっています。
+									</div>
+
+									<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+										<div style="flex: 1; min-width: 300px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+											<div style="font-weight: bold; color: #000; margin-bottom: 10px;">▼ 通常のエディタとの違い</div>
+											<div style="color: #000;">
+												・キーボード操作が中心で、マウスをほとんど使いません。<br>
+												・編集モードとコマンドモードが分かれており、操作が明確です。<br>
+												・設定や拡張が豊富で、作業効率を大きく高められます。
+											</div>
+										</div>
+
+										<div style="flex: 1; min-width: 300px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+											<div style="font-weight: bold; color: #000; margin-bottom: 10px;">▼ インフラで使われる理由</div>
+											<div style="color: #000;">
+												・サーバ環境ではGUIが使えないことが多く、Vimが標準で利用できます。<br>
+												・SSH接続先でも同じ操作体系で編集できるため、環境に左右されません。<br>
+												・設定ファイルの編集が高速に行えるため、作業効率が向上します。
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div style="background-color: #f9f9f9; padding: 20px; border: 1px dashed #333; border-radius: 10px; color: #000;">
+									<div style="font-weight: bold; margin-bottom: 5px;">【作業効率が上がる理由】</div>
+									<div>
+										・キーボードから手を離さずに編集できるため、操作が速くなります。<br>
+										・繰り返し作業をマクロで自動化できます。<br>
+										・検索・置換・移動などが直感的かつ高速に行えます。
+									</div>
+								</div>
+
+								<br><br>
+
+								<div style="margin-bottom: 40px;">
+									<h2 style="color: #000; font-size: 20px; border-left: 4px solid #333; padding-left: 10px; margin-bottom: 15px;">Ubuntu（仮想環境）でVimをインストールする手順</h2>
+									<p style="color: #000;">
+										Ubuntuでは、以下の手順でVimをインストールします。<br>
+										パッケージ処理が途中で中断されている場合があるため、最初にdpkgの再設定を行います。
+									</p>
+
+									<div style="background-color: #f9f9f9; border: 1px solid #ccc; padding: 20px; margin: 15px 0; border-radius: 4px;">
+										<pre style="margin: 0; color: #000;">sudo dpkg --configure -a</pre>
+										<pre style="margin: 0; color: #000;">sudo apt-get install vim</pre>
+									</div>
+
+									<p style="color: #000;">
+										これにより、途中で止まっていたパッケージ処理が修復され、その後Vimを正常にインストールできます。
+									</p>
+								</div>
+
+								<div style="margin-bottom: 40px;">
+									<h3 style="color: #000; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 10px;">コマンドの説明</h3>
+
+									<div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ccc; margin-bottom: 15px;">
+										<p style="margin: 0 0 5px 0; font-weight: bold; color: #000;">sudo dpkg --configure -a</p>
+										<div style="color: #000;">
+											・途中で中断されたパッケージ処理を再設定します。<br>
+											・インストールや更新が途中で止まった場合に使用します。
+										</div>
+									</div>
+
+									<div style="background-color: #fff; padding: 15px; border-radius: 4px; border: 1px solid #ccc;">
+										<p style="margin: 0 0 5px 0; font-weight: bold; color: #000;">sudo apt-get install vim</p>
+										<div style="color: #000;">
+											・Vimをインストールするコマンドです。<br>
+											・apt-getはパッケージ管理ツールで、installはインストールを意味します。
+										</div>
+									</div>
+								</div>
+
+								<div style="margin-bottom: 40px;">
+									<h3 style="color: #000; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 10px;">Bashとは</h3>
+									<div style="color: #000;">
+										Bash（Bourne Again Shell）は、Linuxで広く使われているシェルです。<br>
+										シェルとは、OSに命令を伝えるためのインターフェースのことです。<br>
+										コマンドを入力して操作するため、サーバ管理や自動化に欠かせない存在です。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							Vimは通常のエディタと異なり、<span class = "yellow_line FontBold">モード切り替えによって高速に編集できる仕組み</span>を持つことを理解する。
+						</div>
+						<div class = "check FontBold">
+							サーバ環境ではGUIが使えない場面が多く、<span class = "yellow_line FontBold">Vimがインフラ作業で標準的に利用される理由</span>を説明できるようになる。
+						</div>
+						<div class = "check FontBold">
+							UbuntuでのVimインストール手順として、<span class = "yellow_line FontBold">dpkgの再設定 → apt-get install の正しい流れ</span>を実行できるようになる。<br><br>
+						</div-->
+					</div>
+			</div>
+			<div id = "side">
+				<div class = "Side1">
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">AWS教本</div></a>
+					<!-- a href = "#2"><div class = "indexData1">Vim</div></a-->
+				</div>
+				<div class = "Side2">
+					<div class = "CharTitle news">新着情報</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+					<div class = "CharTitle QA">QA</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+				</div>
+			</div>
+			<div id = "footerLs"></div>
+			<div id = "footerL">
+				<div class = "FooterInfo">Training content</div>
+				<div class = "FooterSent">
+					<span class = "info">1日目：1/7(水): コンピュータ基礎知識（全2回）1回目</span><br>
+					2日目：1/8(木): コンピュータ基礎知識（全2回）2回目<br>
+					3日目：1/9(金): サーバー基礎知識（全5回）1回目<br>
+					4日目：1/13(火): サーバー基礎知識（全5回）2回目<br>
+					5日目：1/14(水): サーバー基礎知識（全5回）3回目<br>
+					6日目：1/15(木): サーバー基礎知識（全5回）4回目<br>
+					7日目：1/16(金): サーバー基礎知識（全5回）5回目<br>
+					8日目：1/19(月): PCの仕組み（全1回）1回目<br>
+					9日目：1/20(火): AWS入門（全5回）1回目<br>
+					10日目：1/21(水): AWS入門（全5回）2回目<br>
+					11日目：1/22(木): AWS入門（全5回）3回目<br>
+					12日目：1/23(金): AWS入門（全5回）4回目<br>
+					13日目：1/26(月): AWS入門（全5回）5回目<br>
+					14日目：1/27(火): サーバー構築演習（全8回）1回目<br>
+					15日目：1/28(水): サーバー構築演習（全8回）2回目<br>
+					16日目：1/29(木): サーバー構築演習（全8回）3回目<br>
+					17日目：1/30(金): サーバー構築演習（全8回）4回目<br>
+					18日目：2/2(月): サーバー構築演習（全8回）5回目<br>
+					19日目：2/3(火): サーバー構築演習（全8回）6回目<br>
+					20日目：2/4(水): サーバー構築演習（全8回）7回目<br>
+					21日目：2/5(木): サーバー構築演習（全8回）8回目<br>
+					22日目：2/6(金): ネットワーク基礎知識（全3回）1回目<br>
+					23日目：2/9(月): ネットワーク基礎知識（全3回）2回目<br>
+					24日目：2/10(火): ネットワーク基礎知識（全3回）3回目<br>
+					25日目：2/12(木): LPIC1資格対策（全6回）1回目<br>
+					26日目：2/13(金): LPIC1資格対策（全6回）2回目<br>
+					27日目：2/16(月): LPIC1資格対策（全6回）3回目<br>
+					28日目：2/17(火): LPIC1資格対策（全6回）4回目<br>
+					29日目：2/18(水): LPIC1資格対策（全6回）5回目<br>
+					30日目：2/19(木): LPIC1資格対策（全6回）6回目<br>
+					31日目：2/20(金): クライアントPC知識（全1回）1回目<br>
+					32日目：2/24(火): セキュリティ対策（全3回）1回目<br>
+					33日目：2/25(水): セキュリティ対策（全3回）2回目<br>
+					34日目：2/26(木): セキュリティ対策（全3回）3回目<br>
+					35日目：2/27(金): 総合実技課題（全1回）1回目<br>
+				</div>
+			</div>
+			<div id = "footerR">
+				<div class = "FooterInfo">Information</div>
+				<div class = "FooterSent">
+					--
+				</div>
+			</div>
+			<div id = "footerRs"></div>
+			<div id = "CopyR">&copy;2026 ANTS. All rights reserved.</div>
+			<div class = "ToTop"><a href = "#wrapper"></a></div>
+		</div>
+	</body>
+</html>

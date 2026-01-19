@@ -230,7 +230,12 @@ a:active, a:visited { color: black; }
 	width: 359px;
 	height: 416px;
 }
-
+.TextImgAWSBook {
+	background-image: url( "../img/ImgAWSBook.png" );
+	background-repeat: no-repeat;
+	width: 359px;
+	height: 416px;
+}
 
 /************/
 /* 共通 */
