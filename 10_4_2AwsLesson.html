@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AWS入門2</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
+		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
+		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = "wrapper">
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
+			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
+			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
+			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
+			<div id = "padding"></div>
+			<div id = "pan">
+				<ul>
+					<li class = "panList">
+						<a href = "index.html">Home</a>
+					</li>
+					<li class = "panList">
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						AWS入門2
+					</li>
+				</ul>
+			</div>
+			<div id = "content">
+				<div class = "title">AWS入門2</div>
+				<div class = "StepNum FontBold">AWSの概要</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">AWS教本</div>
+						<div>
+							「図解 Amazon Web Servicesの仕組みとサービスがたった1日でよくわかる」(以降、AWS教本)の
+							<span style = "color: blue;">Chapter<span style = "font-size: 2rem;">3</span></span>を読解してレポートにまとめてください。<br>
+							<span style = "color: red;"><br>課題：EC2をつかってVimチューター日本語版で演習できるよう設定してください。<br></span>
+							<div class = "TextImgAWSBook"></div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWS</span>の概要を知り、説明できる。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWSサービス周辺に関わる用語</span>を知る。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWSサービスのアカウント登録</span>をする。
+						</div>
+						<br>
+						<div id = "2" class = "date marginB05rem">Vim演習</div>
+						<div>
+							<div class = "marginB05rem">Vimチューターのレッスンを独習ください。</div>
+						</div>
+						<!--div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							Vimは通常のエディタと異なり、<span class = "yellow_line FontBold">モード切り替えによって高速に編集できる仕組み</span>を持つことを理解する。
+						</div>
+						<div class = "check FontBold">
+							サーバ環境ではGUIが使えない場面が多く、<span class = "yellow_line FontBold">Vimがインフラ作業で標準的に利用される理由</span>を説明できるようになる。
+						</div>
+						<div class = "check FontBold">
+							UbuntuでのVimインストール手順として、<span class = "yellow_line FontBold">dpkgの再設定 → apt-get install の正しい流れ</span>を実行できるようになる。<br><br>
+						</div-->
+					</div>
+			</div>
+			<div id = "side">
+				<div class = "Side1">
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">AWS教本</div></a>
+					<a href = "#2"><div class = "indexData1">Vim演習</div></a>
+				</div>
+				<div class = "Side2">
+					<div class = "CharTitle news">新着情報</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+					<div class = "CharTitle QA">QA</div>
+					<div class = "CharEmp indent1rem">Currently under construction</div>
+				</div>
+			</div>
+			<div id = "footerLs"></div>
+			<div id = "footerL">
+				<div class = "FooterInfo">Training content</div>
+				<div class = "FooterSent">
+					<span class = "info">1日目：1/7(水): コンピュータ基礎知識（全2回）1回目</span><br>
+					2日目：1/8(木): コンピュータ基礎知識（全2回）2回目<br>
+					3日目：1/9(金): サーバー基礎知識（全5回）1回目<br>
+					4日目：1/13(火): サーバー基礎知識（全5回）2回目<br>
+					5日目：1/14(水): サーバー基礎知識（全5回）3回目<br>
+					6日目：1/15(木): サーバー基礎知識（全5回）4回目<br>
+					7日目：1/16(金): サーバー基礎知識（全5回）5回目<br>
+					8日目：1/19(月): PCの仕組み（全1回）1回目<br>
+					9日目：1/20(火): AWS入門（全5回）1回目<br>
+					10日目：1/21(水): AWS入門（全5回）2回目<br>
+					11日目：1/22(木): AWS入門（全5回）3回目<br>
+					12日目：1/23(金): AWS入門（全5回）4回目<br>
+					13日目：1/26(月): AWS入門（全5回）5回目<br>
+					14日目：1/27(火): サーバー構築演習（全8回）1回目<br>
+					15日目：1/28(水): サーバー構築演習（全8回）2回目<br>
+					16日目：1/29(木): サーバー構築演習（全8回）3回目<br>
+					17日目：1/30(金): サーバー構築演習（全8回）4回目<br>
+					18日目：2/2(月): サーバー構築演習（全8回）5回目<br>
+					19日目：2/3(火): サーバー構築演習（全8回）6回目<br>
+					20日目：2/4(水): サーバー構築演習（全8回）7回目<br>
+					21日目：2/5(木): サーバー構築演習（全8回）8回目<br>
+					22日目：2/6(金): ネットワーク基礎知識（全3回）1回目<br>
+					23日目：2/9(月): ネットワーク基礎知識（全3回）2回目<br>
+					24日目：2/10(火): ネットワーク基礎知識（全3回）3回目<br>
+					25日目：2/12(木): LPIC1資格対策（全6回）1回目<br>
+					26日目：2/13(金): LPIC1資格対策（全6回）2回目<br>
+					27日目：2/16(月): LPIC1資格対策（全6回）3回目<br>
+					28日目：2/17(火): LPIC1資格対策（全6回）4回目<br>
+					29日目：2/18(水): LPIC1資格対策（全6回）5回目<br>
+					30日目：2/19(木): LPIC1資格対策（全6回）6回目<br>
+					31日目：2/20(金): クライアントPC知識（全1回）1回目<br>
+					32日目：2/24(火): セキュリティ対策（全3回）1回目<br>
+					33日目：2/25(水): セキュリティ対策（全3回）2回目<br>
+					34日目：2/26(木): セキュリティ対策（全3回）3回目<br>
+					35日目：2/27(金): 総合実技課題（全1回）1回目<br>
+				</div>
+			</div>
+			<div id = "footerR">
+				<div class = "FooterInfo">Information</div>
+				<div class = "FooterSent">
+					--
+				</div>
+			</div>
+			<div id = "footerRs"></div>
+			<div id = "CopyR">&copy;2026 ANTS. All rights reserved.</div>
+			<div class = "ToTop"><a href = "#wrapper"></a></div>
+		</div>
+	</body>
+</html>
