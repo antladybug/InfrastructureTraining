@@ -1,70 +1,102 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ITインフラ基礎研修</title>
+		<title>AWS入門2</title>
 		<meta charset = "UTF-8">
 		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 		<link rel = "icon" type = "image/png" href = "./img/icon.ico" />
 		<link rel = "stylesheet" href = "./css/StyleSheet.css" />
-		<style>
-			.info { color: yellow; }
-			.fontS_130 { font-size: 130%;}
-			#content_info { font-size: 1.2rem; background-color: lavender; margin-left: 2rem; margin-bottom: 1rem; padding: 2rem; border-radius: 5px; }
+		<link rel = "stylesheet" href = "./css/StyleSheetSub.css" />
+		<style>#menu3 { font-weight: bold; border-bottom: .2rem solid darkorange; background: ghostwhite; }
+		
+		input#acd-check1{ display: none; }
+		.acd-label{ cursor: pointer; margin-left: 1rem; }
+		.acd-content {
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		 }
+		.acd-check:checked + .acd-label + .acd-content {
+			opacity: 1;
+			visibility: visible;
+		}
 		</style>
 	</head>
 	<body>
 		<div id = "wrapper">
-			<div id = "header" class = "FontBold">ITインフラ基礎研修</div>
+			<div id = "header"><a href = "index.html"><span id = "headerIC" class = "FontBold">インフラ基礎研修</span></a></div>
 			<div id = "menu1"><a href = "list.html"><div class = "FontBold">研修一覧</div></a></div>
-			<!--div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div-->
-			<!--div id = "menu3"><a href = "Etc.html"><div class = "FontBold">雑記</div></a></div-->
+			<!-- div id = "menu2"><a href = "columm.html"><div class = "FontBold"></div></a></div>
+			<div id = "menu3"><a href = "Etc.html"><div class = "FontBold"></div></a></div -->
 			<div id = "padding"></div>
-			<div id = "HPImage"></div>
 			<div id = "pan">
 				<ul>
 					<li class = "panList">
-						<span style = "font-size: 3rem; font-weight: bold;">ITインフラ基礎研修</span>
+						<a href = "index.html">Home</a>
+					</li>
+					<li class = "panList">
+						<a href = "list.html">研修一覧</a>
+					</li>
+					<li class = "panList">
+						AWS入門3
 					</li>
 				</ul>
 			</div>
-			<div id = "content" class = "marginL10rem" style = "padding-right: .5rem;">
-				<!-- for irregular div style = "font-size: 2rem;">2026/01/21(火)  9:00～1<span style = "font-size: 2rem; color: blue;">3</span>:30</div-->
-				<div style = "font-size: 2rem;">2026/01/22(木)  9:00～1<span style = "font-size: 2rem; color: blue;">4</span>:30</div>
-				<div style = "font-size: 1.5rem;">
-				・レポート課題の実施 - <a href = "10_4_2AwsLesson.html">
-					<span style = "font-size: 1.5rem; color: blue;">AWS入門2</span></a>を読解のこと。<br>
-				<div id = "content_info">
-					前半部では、受講者自身が主体的に学習を進める「自習スタイル」を採用しています。
-					実務では必要な情報を自ら調べ、理解し整理する力が重要です。
-					自分で情報を収集して疑問点をまとめ、主体的に学ぶ姿勢をつけましょう。
-				</div>
-				</div>
-				<div style = "font-size: 2rem;">2026/01/22(木)   1<span style = "font-size: 2rem; color: blue;">4</span>:30～17:30</div>
-				<div style = "font-size: 1.5rem;">・講義解説、質疑応答</div>
-				<div id = "content_info">
-					後半部では、前半の内容を講義形式で解説します。
-					質疑応答もまじえて不明瞭な領域を言語化する練習を重ねながら、知識土台を積み上げましょう。
-				</div>
-				<div style = "font-size: 2rem;">2026/01/22(木)   17:30～18:00</div>
-				<div style = "font-size: 1.5rem;">・当日の研修報告書の作成</div>
-				<div style = "font-size: 1.5rem;">・次回、講義の流れを意識合わせ</div>
-				<div style = "font-size: 1.5rem;">・研修内容の振り返りを自習</div>
+			<div id = "content">
+				<div class = "title">AWS入門3</div>
+				<div class = "StepNum FontBold">AWSの概要</div>
+					<div class = "WeekData">
+						<div id = "1" class = "date marginB05rem">AWS教本</div>
+						<div>
+							「図解 Amazon Web Servicesの仕組みとサービスがたった1日でよくわかる」(以降、AWS教本)の
+							<span style = "color: blue;">Chapter<span style = "font-size: 2rem;">4</span></span>を読解してレポートにまとめてください。<br>
+							<div class = "TextImgAWSBook"></div>
+						</div>
+						<div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWS</span>の概要を知り、説明できる。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWSサービス周辺に関わる用語</span>を知る。
+						</div>
+						<div class = "check FontBold">
+							<span class = "yellow_line FontBold">AWSサービスのアカウント登録</span>をする。
+						</div>
+						<br>
+						<div id = "2" class = "date marginB05rem">Vim演習</div>
+						<div>
+							<div class = "marginB05rem">Vimチューターのレッスンを独習ください。</div>
+						</div>
+						<!--div class = "goal">到達目標</div>
+						<div class = "check FontBold">
+							Vimは通常のエディタと異なり、<span class = "yellow_line FontBold">モード切り替えによって高速に編集できる仕組み</span>を持つことを理解する。
+						</div>
+						<div class = "check FontBold">
+							サーバ環境ではGUIが使えない場面が多く、<span class = "yellow_line FontBold">Vimがインフラ作業で標準的に利用される理由</span>を説明できるようになる。
+						</div>
+						<div class = "check FontBold">
+							UbuntuでのVimインストール手順として、<span class = "yellow_line FontBold">dpkgの再設定 → apt-get install の正しい流れ</span>を実行できるようになる。<br><br>
+						</div-->
+					</div>
 			</div>
-			<!--div id = "side">
+			<div id = "side">
 				<div class = "Side1">
+					<div class = "index" style = "margin-top: 0!important; border-bottom: solid black .2rem;">目次</div>
+					<a href = "#1"><div class = "indexData1">AWS教本</div></a>
+					<a href = "#2"><div class = "indexData1">Vim演習</div></a>
 				</div>
 				<div class = "Side2">
-					<div class = "CharTitle news" style = "margin-top: 0!important;">新着情報</div>
+					<div class = "CharTitle news">新着情報</div>
 					<div class = "CharEmp indent1rem">Currently under construction</div>
 					<div class = "CharTitle QA">QA</div>
 					<div class = "CharEmp indent1rem">Currently under construction</div>
 				</div>
-			</div-->
+			</div>
 			<div id = "footerLs"></div>
 			<div id = "footerL">
 				<div class = "FooterInfo">Training content</div>
 				<div class = "FooterSent">
-					1日目：1/7(水): コンピュータ基礎知識（全2回）1回目<br>
+					<span class = "info">1日目：1/7(水): コンピュータ基礎知識（全2回）1回目</span><br>
 					2日目：1/8(木): コンピュータ基礎知識（全2回）2回目<br>
 					3日目：1/9(金): サーバー基礎知識（全5回）1回目<br>
 					4日目：1/13(火): サーバー基礎知識（全5回）2回目<br>
@@ -74,7 +106,7 @@
 					8日目：1/19(月): PCの仕組み（全1回）1回目<br>
 					9日目：1/20(火): AWS入門（全5回）1回目<br>
 					10日目：1/21(水): AWS入門（全5回）2回目<br>
-					<span class = "info">11日目：1/22(木): AWS入門（全5回）3回目</span><br>
+					11日目：1/22(木): AWS入門（全5回）3回目<br>
 					12日目：1/23(金): AWS入門（全5回）4回目<br>
 					13日目：1/26(月): AWS入門（全5回）5回目<br>
 					14日目：1/27(火): サーバー構築演習（全8回）1回目<br>
@@ -104,11 +136,12 @@
 			<div id = "footerR">
 				<div class = "FooterInfo">Information</div>
 				<div class = "FooterSent">
-					現在のカリキュラムは、<span class = "info fontS_130">AWS入門3回目</span>です。
+					--
 				</div>
 			</div>
 			<div id = "footerRs"></div>
 			<div id = "CopyR">&copy;2026 ANTS. All rights reserved.</div>
+			<div class = "ToTop"><a href = "#wrapper"></a></div>
 		</div>
 	</body>
 </html>
